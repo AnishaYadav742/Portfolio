@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anisha Yadav Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #282c34;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p.tagline {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    header p.photo-note {
+      font-size: 0.95rem;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      font-style: italic;
+    }
+    .profile-pics {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .profile-pics img {
+      height: 220px;
+      width: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background: #444;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    section.active {
+      display: block;
+    }
+    .arrow-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .arrow-nav button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background-color: #282c34;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .experience-photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .experience-photo img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .project-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .project-list li {
+      margin-bottom: 1.5rem;
+    }
+    .project-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anisha Yadav</h1>
+    <p class="tagline">Transforming data into decisions through GIS and Python.</p>
+    <div class="profile-pics">
+      <img src="C:/Users/acer/Desktop/htmi/pp.jpg" alt="Professional Photo">
+    </div>
+    <p class="photo-note">📸 A clean and confident professional photo builds trust and reflects readiness for the real world.</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('experience')">Experience</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <div class="arrow-nav">
+    <button onclick="previousSection()">⬅️</button>
+    <button onclick="nextSection()">➡️</button>
+  </div>
+
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>
+      I’m Anisha Yadav, a final-year Geomatics Engineering student with over 8 years of experience in government service. 
+      My core expertise lies in remote sensing, GIS, and cadastral mapping. I'm deeply passionate about leveraging geospatial 
+      technologies to solve real-world challenges — from sustainable urban planning to smarter data-driven decisions.
+    </p>
+    <p>
+      A lifelong learner at heart, I bring precision to every project and creativity to every solution — both in code and through the lens of my camera.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>🎓 Schooling from Amar Kanti Secondary English School – 2011</li>
+      <li>📐 Diploma in Geomatics Engineering – 2015</li>
+      <li>🔬 +2 Science – 2019</li>
+      <li>📍 Bachelor in Geomatics Engineering – Started in 2021 (Ongoing)</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>8 years as a Government Employee</li>
+      <li>Cadastral Surveying and Mapping</li>
+      <li>Remote Sensing</li>
+      <li>GIS</li>
+      <li>Total Station</li>
+      <li>Urban Planning and Plotting</li>
+      <li>Topographical Mapping</li>
+    </ul>
+    <div class="experience-photo">
+      <img src="C:/Users/acer/Desktop/htmi/jb.jpg" alt="Experience Photo">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="project-list">
+      <li>
+        <span class="project-title">1. 3D Modelling of Khopasi Hydropower</span>
+      </li>
+      <li>
+        <span class="project-title">2. Groundwater Potential Mapping of Mahottari</span>
+      </li>
+      <li>
+        <span class="project-title">3. Direction Angle Transformer & Angle Visualization Panel</span>
+      </li>
+      <li>
+        <span class="project-title">4. Least Cost Path Analysis for Transmission Line from Dhalkebar Substation</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: anishayadav8848@gmail.com</p>
+    <p>Phone: 9860915021</p>
+  </section>
+
+  <script>
+    const sections = ["about", "education", "experience", "projects", "contact"];
+    let currentSectionIndex = 0;
+
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      currentSectionIndex = sections.indexOf(id);
+    }
+
+    function nextSection() {
+      currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+      showSection(sections[currentSectionIndex]);
+    }
+
+    function previousSection() {
+      currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
+      showSection(sections[currentSectionIndex]);
+    }
+  </script>
+</body>
+</html>
